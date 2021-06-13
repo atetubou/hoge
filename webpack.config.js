@@ -5,6 +5,12 @@ module.exports = {
     mode: 'development',
     entry: './src/index.ts',
     devtool: 'inline-source-map',
+
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        index: 'index.html',
+    },
+
     module: {
         rules: [
             {
