@@ -13,5 +13,5 @@ npm run serve
 
 ## TODO
 
-- [ ] use [pretier](https://prettier.io/)?
+- [ ] use [prettier](https://prettier.io/)?
 - [ ] connect with running binary?
