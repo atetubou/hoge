@@ -39,17 +39,17 @@ let drag = {
 
 
 app.view.onmousedown = function(e){
-    drag.pos.x = e.offsetX;
-    drag.pos.y = e.offsetY;
+    drag.pos.x = e.x;
+    drag.pos.y = e.y;
     drag.dragged = true;
 };
 
 app.view.onmousemove = function(e){
     if (drag.dragged){
-        container.x += e.offsetX - drag.pos.x;
-        container.y += e.offsetY - drag.pos.y;
-        drag.pos.x = e.offsetX;
-        drag.pos.y = e.offsetY;
+        container.x += e.x - drag.pos.x;
+        container.y += e.y - drag.pos.y;
+        drag.pos.x = e.x;
+        drag.pos.y = e.y;
     }
 };
 
