@@ -2,7 +2,7 @@
 
 import * as path from 'path';
 import {Configuration as WebpackConfiguration} from 'webpack';
-import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
+import {Configuration as WebpackDevServerConfiguration} from "webpack-dev-server";
 
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 
