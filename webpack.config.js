@@ -6,9 +6,11 @@ module.exports = {
     entry: './src/index.ts',
     devtool: 'inline-source-map',
 
+    // https://webpack.js.org/configuration/dev-server
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
         index: 'index.html',
+        writeToDisk: true,
+        open: true,
     },
 
     module: {
