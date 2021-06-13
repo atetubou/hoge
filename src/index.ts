@@ -31,3 +31,28 @@ for (let x = -10; x <= 10; ++x){
         graphics.endFill();
     }
 }
+
+let drag = {
+    pos: new PIXI.Point(0, 0),
+    dragged: false,
+};
+
+
+app.view.onmousedown = function(e){
+    drag.pos.x = e.offsetX;
+    drag.pos.y = e.offsetY;
+    drag.dragged = true;
+};
+
+app.view.onmousemove = function(e){
+    if (drag.dragged){
+        container.x += e.offsetX - drag.pos.x;
+        container.y += e.offsetY - drag.pos.y;
+        drag.pos.x = e.offsetX;
+        drag.pos.y = e.offsetY;
+    }
+};
+
+app.view.onmouseup = function(){
+    drag.dragged = false;
+}
