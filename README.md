@@ -1,6 +1,13 @@
 # hoge
 
+## How to setup
+
+```
+npm install
+```
+
 ## How to run
+
 
 ```
 npm run serve
