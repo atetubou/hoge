@@ -1,7 +1,5 @@
 import * as PIXI from 'pixi.js';
 
-console.log("hell");
-
 const app = new PIXI.Application({
     width: 800,
     height : 600,
