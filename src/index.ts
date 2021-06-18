@@ -32,7 +32,7 @@ for (let x = -10; x <= 10; ++x){
     }
 }
 
-let drag = {
+const drag = {
     pos: new PIXI.Point(0, 0),
     dragged: false,
 };
