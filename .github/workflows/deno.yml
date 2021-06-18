@@ -18,10 +18,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        deno: ["v1.x"]
-
     steps:
       - name: Setup repo
         uses: actions/checkout@v2
@@ -30,7 +26,7 @@ jobs:
         # uses: denoland/setup-deno@v1
         uses: denoland/setup-deno@4a4e59637fa62bd6c086a216c7e4c5b457ea9e79
         with:
-          deno-version: ${{ matrix.deno }} # tests across multiple Deno versions
+          deno-version: "v1.x"
 
       # Uncomment this step to verify the use of 'deno fmt' on each commit.
       # - name: Verify formatting
