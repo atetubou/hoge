@@ -54,3 +54,11 @@ app.view.onmousemove = function (e) {
 app.view.onmouseup = function () {
   drag.dragged = false;
 };
+
+fetch("", {
+  method: "POST",
+  body: JSON.stringify({
+    "x": 1,
+    "y": 2,
+  }),
+});
