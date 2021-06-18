@@ -21,13 +21,15 @@ container.y = app.screen.height / 2;
 container.pivot.x = container.width / 2;
 container.pivot.y = container.height / 2;
 
+graphics.beginFill(0xDE3249, 1);
+
 for (let x = -10; x <= 10; ++x) {
   for (let y = -20; y <= 20; ++y) {
-    graphics.beginFill(0xDE3249, 1);
     graphics.drawCircle(x * 10, y * 10, 3);
-    graphics.endFill();
   }
 }
+
+graphics.endFill();
 
 const drag = {
   pos: new PIXI.Point(0, 0),
