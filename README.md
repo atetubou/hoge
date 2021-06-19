@@ -20,6 +20,14 @@ For html/javascript serving.
 npm run serve
 ```
 
+## misc
+
+Apply formatter using [deno](https://deno.land/#installation).
+
+```
+deno fmt $(git ls-files)
+```
+
 ## references
 
 - https://pixijs.io/examples/#/demos-basic/container.js
