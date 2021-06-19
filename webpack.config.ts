@@ -21,6 +21,9 @@ const config: Configuration = {
     index: "index.html",
     writeToDisk: true,
     open: true,
+    proxy: {
+      "/api": "http://localhost:8081",
+    },
   },
 
   module: {

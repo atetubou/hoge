@@ -50,6 +50,7 @@ window.onload = function () {
   drawcircles();
   points.onchange = drawcircles;
 
+
   const drag = {
     pos: new PIXI.Point(0, 0),
     dragged: false,
@@ -74,11 +75,31 @@ window.onload = function () {
     drag.dragged = false;
   };
 
-  // fetch(window.location.origin + "/api", {
-  //   method: "POST",
-  //   body: JSON.stringify({
-  //     "x": 1,
-  //     "y": 2,
-  //   }),
-  // });
+  let isLoop = false;
+
+  let loop = function () {
+    fetch(window.location.origin + "/api", {
+      method: "POST",
+      body: points.value,
+    }).then((response) => response.json()).then(function (data) {
+      points.value = JSON.stringify(data);
+
+      points.onchange(null);
+
+      if (isLoop) {
+        setTimeout(loop, 2000);
+      }
+    });
+  };
+
+  const startbutton = document.getElementById("startloop");
+  startbutton.onclick = function () {
+    isLoop = true;
+    loop();
+  };
+
+  const stopbutton = document.getElementById("stoploop");
+  stopbutton.onclick = function () {
+    isLoop = false;
+  };
 };
