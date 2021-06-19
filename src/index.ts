@@ -10,7 +10,7 @@ window.onload = function () {
 
   const points = document.getElementById("points") as HTMLInputElement;
 
-  let circles = [];
+  const circles = [];
   for (let x = -3; x <= 3; ++x) {
     for (let y = -6; y <= 6; ++y) {
       circles.push({
@@ -37,14 +37,12 @@ window.onload = function () {
   container.pivot.y = container.height / 2;
 
   const drawcircles = function () {
-    const circles = JSON.parse(points.value);
+    const circles = JSON.parse(points.value) as PIXI.Point[];
 
     graphics.clear();
     graphics.beginFill(0xDE3249, 1);
 
-    circles.forEach((circle: any) =>
-      graphics.drawCircle(circle.x, circle.y, 3)
-    );
+    circles.forEach((circle) => graphics.drawCircle(circle.x, circle.y, 3));
 
     graphics.endFill();
   };
