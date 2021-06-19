@@ -37,7 +37,6 @@ window.onload = function () {
   container.pivot.y = container.height / 2;
 
   const drawcircles = function () {
-    const points = document.getElementById("points") as HTMLInputElement;
     const circles = JSON.parse(points.value);
     console.log("fired", circles);
 
