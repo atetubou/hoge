@@ -48,8 +48,6 @@ window.onload = function () {
     );
 
     graphics.endFill();
-
-    app.render();
   };
 
   drawcircles();
