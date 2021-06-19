@@ -55,7 +55,7 @@ app.view.onmouseup = function () {
   drag.dragged = false;
 };
 
-fetch("", {
+fetch(window.location.origin + "/api", {
   method: "POST",
   body: JSON.stringify({
     "x": 1,
