@@ -50,7 +50,6 @@ window.onload = function () {
   drawcircles();
   points.onchange = drawcircles;
 
-
   const drag = {
     pos: new PIXI.Point(0, 0),
     dragged: false,
