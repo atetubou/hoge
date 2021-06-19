@@ -38,7 +38,6 @@ window.onload = function () {
 
   const drawcircles = function () {
     const circles = JSON.parse(points.value);
-    console.log("fired", circles);
 
     graphics.clear();
     graphics.beginFill(0xDE3249, 1);
