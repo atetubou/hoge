@@ -76,7 +76,7 @@ window.onload = function () {
 
   let isLoop = false;
 
-  let loop = function () {
+  const loop = function () {
     fetch(window.location.origin + "/api", {
       method: "POST",
       body: points.value,
