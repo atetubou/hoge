@@ -80,6 +80,9 @@ window.onload = function () {
     fetch(window.location.origin + "/api", {
       method: "POST",
       body: points.value,
+      headers: {
+        "Content-Type": "application/json",
+      },
     }).then((response) => response.json()).then(function (data) {
       points.value = JSON.stringify(data);
 

@@ -3,7 +3,17 @@
 ## How to setup
 
 ```
-npm install
+npm install # for TypeScript build
+```
+
+```
+pipenv shell # For python server run
+```
+
+## How to generate html/js files.
+
+```
+npm run build # dist dir will have static files
 ```
 
 ## How to run
@@ -11,7 +21,7 @@ npm install
 For api serving.
 
 ```
-go run ./server/main.go
+gunicorn -k uvicorn.workers.UvicornWorker --reload python_server.main:app
 ```
 
 For html/javascript serving.
