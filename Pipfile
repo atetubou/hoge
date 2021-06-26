@@ -7,6 +7,7 @@ name = "pypi"
 functions-framework = "~=2.0"
 fastapi = "*"
 aiofiles = "*"
+uvicorn = {extras = ["standard"], version = "*"}
 
 [dev-packages]
 
