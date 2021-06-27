@@ -1,4 +1,5 @@
 # https://cloud.google.com/appengine/docs/standard/python3/config/appref
+service: tikuta-hoge
 runtime: python39
 entrypoint: gunicorn -k uvicorn.workers.UvicornWorker -b :$PORT python_server.main:app
 handlers:
